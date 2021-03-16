@@ -27,7 +27,7 @@ body {
   padding: 10px;
 }
 
-.h2 {
+.title {
   font-family: sans-serif;
 }
 
@@ -35,7 +35,7 @@ body {
   height: 50%;
   width: 75%;
   background-color: white;
-  margin-left: 150px;
+  margin-left: 120px;
   margin-top: 75px;
 }
 
@@ -48,7 +48,7 @@ body {
 
 #middle {
   background-color: lightskyblue;
-  border-radius: 25px;
+  border-radius: 15px;
   color: white;
 }
 

@@ -1,17 +1,17 @@
 import React, { Component } from "react";
+import data from "./data";
+import Users from "./Users";
+import "./buttons";
+import "./counter";
 
-import "./index.css";
+import "./App.css";
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: "",
-      job: "",
-      location: "",
-      employer: "",
-      movies: [],
-      id: null,
+      user: data,
+      id: 0,
     };
   }
 
@@ -20,29 +20,22 @@ class App extends Component {
       <div className="App">
         <div className="header">
           <div className="home">
-            <h2>Home</h2>
+            <h2 className="title">Home</h2>
           </div>
         </div>
-        <div className="card">
-          <div className="top">
-            <div className="name">
-              <h1>{this.state.name}</h1>
-            </div>
-            <div className="number">
-              <h1>{this.state.id}</h1>
-            </div>
-          </div>
-          <div className="demographics"></div>
-          <div className="movies"></div>
+        <div className="Card">
+          <Users user={this.state.user[this.state.id]} />
+          <div className="num">//put counter here</div>
         </div>
+
         <div className="buttons">
-          <button className="Previous">Previous</button>
+          <button className="Previous">&#x2190; Previous</button>
           <div className="middlewrapper">
             <button id="middle">Edit</button>
             <button id="middle">Delete</button>
             <button id="middle">New</button>
           </div>
-          <button className="Next">Next</button>
+          <button className="Next">Next &#x2192;</button>
         </div>
       </div>
     );
