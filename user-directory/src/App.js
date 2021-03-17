@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import data from "./data";
 import Users from "./Users";
 import "./buttons";
-import "./counter";
 
 import "./App.css";
 
@@ -16,6 +15,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state.user);
     return (
       <div className="App">
         <div className="header">
@@ -25,7 +25,6 @@ class App extends Component {
         </div>
         <div className="Card">
           <Users user={this.state.user[this.state.id]} />
-          <div className="num">//put counter here</div>
         </div>
 
         <div className="buttons">

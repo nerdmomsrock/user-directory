@@ -7,11 +7,13 @@ class Users extends Component {
   }
   render() {
     const { user } = this.props;
+
     return (
       <div>
         <h1>
           {user.name.first} {user.name.last}
         </h1>
+
         <h3>
           From: {user.city}, {user.country}
         </h3>

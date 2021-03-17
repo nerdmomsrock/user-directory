@@ -13,7 +13,7 @@ body {
 
 .App {
   height: 100vh;
-  background-color: darkslategray;
+  background-color: rgb(50, 51, 60);
 }
 
 .header {
@@ -31,7 +31,7 @@ body {
   font-family: sans-serif;
 }
 
-.card {
+.Card {
   height: 50%;
   width: 75%;
   background-color: white;
