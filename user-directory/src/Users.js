@@ -10,6 +10,7 @@ class Users extends Component {
 
     return (
       <div>
+        <h3>{user.id}/25</h3>
         <h1>
           {user.name.first} {user.name.last}
         </h1>

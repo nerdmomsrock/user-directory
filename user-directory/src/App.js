@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import data from "./data";
 import Users from "./Users";
-import "./buttons";
 
 import "./App.css";
 
@@ -13,6 +12,18 @@ class App extends Component {
       id: 0,
     };
   }
+
+  next = () => {
+    this.setState({ id: this.state.id + 1 });
+  };
+
+  previous = () => {
+    this.setState({ id: this.state.id - 1 });
+  };
+
+  counter = () => {
+    this.setState({ user: this.state.user.id + -1 });
+  };
 
   render() {
     console.log(this.state.user);
@@ -28,13 +39,18 @@ class App extends Component {
         </div>
 
         <div className="buttons">
-          <button className="Previous">&#x2190; Previous</button>
+          <button className="Previous" onClick={this.previous}>
+            {"<"}Previous
+          </button>
+
           <div className="middlewrapper">
             <button id="middle">Edit</button>
             <button id="middle">Delete</button>
             <button id="middle">New</button>
           </div>
-          <button className="Next">Next &#x2192;</button>
+          <button className="Next" onClick={this.next}>
+            Next{">"}
+          </button>
         </div>
       </div>
     );
